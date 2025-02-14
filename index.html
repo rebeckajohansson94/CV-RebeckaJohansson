@@ -3,10 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Rebecka Johansson - Välkomstssida</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello World hej</h1>
+    <div class="container">
+        <header class="header">
+            <nav>
+                <ul class="navigation">
+                    <li id="active-page"><i class="fa-solid fa-house"></i><a href="index.html"> Start</a></li>
+                    <li><i class="fa-solid fa-user"></i><a href="cv.html"> CV</a></li>
+                    <li><i class="fa-solid fa-address-book"></i><a href="contact.html"> Kontakt</a></li>
+                </ul>
+            </nav>
+        </header>
+        <aside class="profile-picture">
+            <img src="img/rebecka2.png" alt ="A picture of me, Rebecka Johansson">
+        </aside>
+        <main class="intro">
+            <h1>Rebecka Johansson</h1>
+            <p class="intro-text">Jag är en passionerad frontend-student med högt fokus på problemlösning och att skapa användarvänliga webbapplikationer med tilltalande design. Jag älskar att jobba med HTML, CSS, Javascript och kommer att lära mig moderna ramverk som React för att utvecklas ytterligare. Mitt mål är att ständigt sträva efter att uttöka min kunskap efter kundens och marknadens behov.
+            Läs gärna mer om mig på mitt <a class="cv-link" href="cv.html"><strong>CV</strong></a> </p>
+        </main>
+        
+        <h2 class="project-heading">Projekt</h2>
+        <section class="project-box">
+            <div class="projects project1">
+                <h3>Inloggninssida</h3>
+                <img class="project-picture" src="img/login_page.png" alt ="A picture of my login project">
+                <p class="project-info">Klicka på länken nedan för att komma till projektet <a class="project-link" href="https://github.com/rebeckajohansson94/Loginpage-Uppgift1-Rebecka-Johansson.git" target="_blank">Se projekt</a></p>
+            </div>
+            <div class="projects project2">
+                <h3>Lorem</h3>
+                <img class="project-picture-placeholder" src="img/placeholder.png" alt ="A placeholder image">
+                <p class="project-info">Klicka på länken nedan för att komma till projektet <a class="project-link" href="#">Se projekt</a></p>
+            </div>
+            <div class="projects project3">
+                <h3>Ipsum</h3>
+                <img class="project-picture-placeholder" src="img/placeholder.png" alt ="A placeholder image">
+                <p class="project-info">Klicka på länken nedan för att komma till projektet <a class="project-link" href="#">Se projekt</a></p>
+            </div>
+            <div class="projects project4">
+                <h3>Dolor sit</h3>
+                <img class="project-picture-placeholder" src="img/placeholder.png" alt ="A placeholder image">
+                <p class="project-info">Klicka på länken nedan för att komma till projektet <a class="project-link" href="#">Se projekt</a></p>
+            </div>
+        </section>
+        <footer>
+            <ul class="footer-nav">
+                <li><a href="https://www.linkedin.com/in/rebecka-johansson-b73629349" target="_blank"><i class="fa-brands fa-linkedin"></i> Linkedin</a></li>
+                <li><a href="mailto:rebeckaemmajohansson@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a></li>
+                <li><a href="https://github.com/rebeckajohansson94" target="_blank"><i class="fa-brands fa-github"></i> Github</a></li>
+            </ul>
+        </footer>
+    </div>
     
 </body>
 </html>

@@ -1,0 +1,578 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Poppins", serif;
+    min-height: 100vh;   
+}
+/*  ------------------------------------ */
+/*  ------------START-PAGE-------------- */
+/*  ------------------------------------ */
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+        "header header header header"
+        "image intro intro intro"
+        "p-header p-header p-header p-header"
+        "projects projects projects projects"
+        "footer footer footer footer"; 
+}
+    
+.header {
+    grid-area: header;
+    background-color: #333333;
+    color: white;
+    padding: 1rem;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.profile-picture {
+    grid-area: image;
+    background: linear-gradient(50deg,#f9e1d2, #ffffff);
+    display: flex;
+    justify-content: center; 
+    padding-left: 1rem;
+    padding-top: 1rem;
+    height: 400px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.24); 
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 1rem;
+}
+
+.intro {
+    grid-area: intro;
+    background: white;
+    text-align: center;
+    padding-right: 1rem;
+    padding-top: 2rem;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 30px;
+}
+
+.cv-link{
+    color:black;
+    text-decoration: underline;
+    display: inline-block;
+}
+
+.cv-link:hover{
+    color: black;
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
+.intro-text{
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: start;
+    padding: 1rem;
+}
+
+.project-heading{
+    grid-area: p-header;
+    text-align: center;
+    font-size: 2.5rem;
+    padding-top: 2rem;
+    background-color: #f9e1d2; 
+}
+
+.project-box{
+    grid-area: projects;
+    background-color: #f9e1d2;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+    width: 100%;
+    padding: 2rem;
+}
+
+.projects{
+    padding: 2rem 0;
+    border-radius: 30px;
+    background-color: #fcf8f3;
+    width: 25rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+a:hover{
+    color: rgba(255, 255, 255, 0.829);
+}
+
+/* ----Displays current page------ */
+#active-page{
+    text-decoration: 3px underline;
+    font-weight: 600;
+}
+
+.projects:hover{
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.25);
+}
+
+.project-picture {
+    object-fit: cover;
+    height: 13rem;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.project-picture-placeholder {
+    height: 13rem;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    filter: blur(4px);
+}
+
+h3{
+    font-size: 1.5rem;
+    margin-top: -0.5rem;
+}
+
+.project-link{
+    color:white;
+    display: block;
+    background-color: black;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.project-link:hover{
+    transform: scale(1.1);
+    color:white;
+}
+
+.project-info{
+    padding: 0 3rem 0 3rem;
+}
+
+footer {
+    grid-area: footer;
+    background: #333333;
+    color: white;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+/*  ------------------------------------ */
+/*  ---------------CV-PAGE-------------- */
+/*  ------------------------------------ */
+
+.container-aboutme{
+    background: linear-gradient(to top,#e9d2c3, #ece8e8);
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto 1fr auto;
+    overflow: hidden;
+    grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+}
+
+.languages{
+    grid-area: sidebar;
+    padding: 0.5rem;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background: #fff;
+}
+
+.th-language{
+    border-bottom: 3px solid rgb(70, 70, 70);
+    font-size: 1.5rem;
+}
+
+.td-swe{
+    padding-top: 2.5rem;
+}
+
+.fa-star{
+    font-size: 0.8rem;
+    padding-bottom: 3rem;
+}
+
+.cv-container{
+    grid-area: main;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.profile-heading{
+    margin-top: 0.5rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.experience-heading{
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: -2rem;
+}
+
+th{
+    font-size: 1.5rem;
+}
+
+.cv-experience{
+    padding: 2rem;
+    border-spacing: 1rem;
+    text-align: left;
+}
+
+/*  ------------------------------------ */
+/*  ------------CONTACT-PAGE------------ */
+/*  ------------------------------------ */
+
+.container-contact{
+    display: grid;
+    min-height: 100vh;
+    text-align: center;
+    background: linear-gradient(to top,#e9d2c3, #ece8e8);
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+.contactinfo {
+    grid-area: main;
+    padding: 2rem;
+}
+
+.contact-heading{
+    font-size: 3rem;
+    padding-top: 2rem;
+}
+
+.contact-form{
+    margin-top:2rem;
+    text-align: center;
+}
+
+.contact-form label,
+.contactinfo p,
+.btn{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.form-heading{
+    padding: 2rem 0 1rem 0;
+}
+
+#email, #message{
+    display: block;
+    margin: 0.3rem auto;  
+    font-size: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.514);
+    outline: none
+}
+
+#email:focus, #message:focus{
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.252);
+}
+
+#email{
+    width: 15%;
+    height: 2rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+#message{
+    width: 30%;
+    height: 9rem;
+    border-radius: 8px;
+    resize: none;
+    padding: 0.5rem 1rem;
+}
+
+.btn{
+    margin-top: 1rem;
+    width: 7rem;
+    height: 3rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.24);
+    border: 1px solid rgba(255, 255, 255, 0.514);
+}
+
+.btn:hover{
+    transform: scale(1.1);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.321);
+}
+
+/*  ------------------------------------ */
+/*  ------------RESPONSIVE-------------- */
+/*  ------------------------------------ */
+
+@media (max-width: 800px) {
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
+        grid-template-areas: 
+        "header"
+        "image"
+        "intro"
+        "p-header"
+        "projects"
+        "footer";
+    }
+
+    .project-box{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "project1 project2"
+        "project3 project4";
+        margin-bottom: 1rem;
+    }
+
+    .profile-picture{
+        height: 16rem;
+        margin: 2rem auto;
+        width: 80%;
+    }
+
+    h1{
+        margin-top: -3rem;
+        margin-bottom: -0.5rem;
+    }
+
+    .intro-text{
+        text-align: center;
+    }
+    .projects{
+        width: auto;
+    }
+    .project-cards{
+        padding: 0.6rem;
+    }
+    .project1{
+        grid-area: project1;
+    }
+    .project2{
+        grid-area: project2;
+    }
+    .project3{
+        grid-area: project3;
+    }
+    .project4{
+        grid-area: project4;
+    }
+    .project-picture {
+        height: 8rem;
+    }
+    .project-picture-placeholder {
+        height: 8rem;
+    }
+
+    .project-link{
+        padding: 0.4rem 0;
+    }
+
+    .container-aboutme{
+        background: linear-gradient(to top,#e9d2c3, #ece8e8);
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto auto;
+        overflow: hidden;
+        grid-template-areas:
+        "header"
+        "main"
+        "sidebar"
+        "footer";
+    }
+
+    .th-language{
+        padding-top: 1.5rem;
+    }
+
+    .cv-experience{
+        padding: 0;
+        border-spacing: 0;
+        text-align: left;
+        width: auto;
+    }
+
+    .profile-text{
+        text-align: center;
+    }
+
+    th{
+        font-size: 1.2rem;
+        padding-bottom: 1rem;
+    }
+
+    .profile-heading{
+        padding-bottom: 1rem;
+    }
+
+    .experience-heading{
+        margin: 2rem;
+        font-size: 2rem;
+    }
+
+    .date{
+        padding-bottom: 1rem;
+    }
+
+    .education {
+        padding-bottom: 1rem;
+    }
+
+    .contact-heading{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        padding-top: 3rem;
+    }
+
+    #email{
+        width: 50%;
+        height: 2rem;
+        padding: 0.5rem;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+    }
+    
+    #message{
+        width: 70%;
+        height: 9rem;
+        border-radius: 8px;
+        resize: none;
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (min-width: 801px) and (max-width: 1200px) {
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
+        grid-template-areas: 
+        "header"
+        "image"
+        "intro"
+        "p-header"
+        "projects"
+        "footer";
+    }
+
+    .project-box{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "project1 project2"
+        "project3 project4";
+        margin-bottom: 1rem;
+    }
+
+    .profile-picture{
+        height: 16rem;
+        margin: 2rem auto;
+        width: 50%;
+    }
+
+    h1{
+        margin-top: -3rem;
+        margin-bottom: -0.5rem;
+    }
+
+    .intro-text{
+        text-align: center;
+    }
+    .projects{
+        width: auto;
+    }
+    .project-cards{
+        padding: 0.5rem;
+    }
+    .project1{
+        grid-area: project1;
+    }
+    .project2{
+        grid-area: project2;
+    }
+    .project3{
+        grid-area: project3;
+    }
+    .project4{
+        grid-area: project4;
+    }
+    .project-picture {
+        height: 15rem;
+    }
+    .project-picture-placeholder {
+        height: 15rem;
+    }
+
+    .contact-heading{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        padding-top: 3rem;
+    }
+
+    #email{
+        width: 25%;
+        height: 2rem;
+        padding: 0.5rem;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+    }
+    
+    #message{
+        width: 40%;
+        height: 9rem;
+        border-radius: 8px;
+        resize: none;
+        padding: 0.5rem 1rem;
+    }
+}
