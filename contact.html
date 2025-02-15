@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <title>Rebecka Johansson - Kontakta mig</title>
+    <title>Rebecka Johansson - Kontakt</title>
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -22,11 +22,12 @@
         <main>
             <div class="contactinfo">
                 <h1 class="contact-heading">Kontaktuppgifter</h1>
-                <p><strong>Email-adress: </strong>rebeckaemmajohansson@gmail.com</p>
+                <p><strong>E-postadress: </strong>rebeckaemmajohansson@gmail.com</p>
                 <p><strong>Mobilnummer: </strong>0737-256542</p>
                 <p><strong>Adress: </strong>Runslingan 16A, Lund</p>
 
-                <form class="contact-form" action="login" method="POST">
+                <!--Action method from W3Schools-->
+                <form class="contact-form" action="mailto:rebeckaemmajohansson@gmail.com" method="post" enctype="text/plain">
                     <h2 class="form-heading">Kontakta mig här nedan om du har frågor: </h2>
                     <label for="email">E-postadress:</label>
                     <input id="email" type="email" placeholder="E-postadress">                  
