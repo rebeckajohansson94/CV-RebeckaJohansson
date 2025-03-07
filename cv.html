@@ -1,15 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, CSS, JavaScript, CV">
+    <meta name="author" content="Rebecka Johansson">
     <title>Rebecka Johansson - CV</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="style.css">
+    <script src="menu.js" defer></script>
+    <script src="cvdata.js" defer></script>
 </head>
 <body>
     <div class="container-aboutme">
         <header class="header">
+            <i class="menu-toggle-btn fa fa-bars"></i>
             <nav>
                 <ul class="navigation">
                     <li><i class="fa-solid fa-house"></i><a href="index.html"> Start</a></li>
@@ -70,54 +75,35 @@
             
                 <section>
                     <h2 class="experience-heading">Arbetslivserfarenhet</h2>
+                    <hr>
                     <table class="cv-experience">
                         <thead>
                             <tr>
-                                <th>Anställningsform</th>
-                                <th>Befattning</th>
+                                <th>
+                                    Anställningsform
+                                </th>
+                                <th>
+                                    Befattning
+                                </th>
                             </tr>
+
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Hemsjukvården Tuna / Thulehem. Ansvarsområde IT-system</strong></td>
-                                <td>Undersköterska</td>
-                            </tr>
-                            <tr>
-                                <td class="date">Maj 2024 - Jan 2025</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Korttids- / Rehabiliteringsenheten Lund</strong></td>
-                                <td>Undersköterska</td>
-                            </tr>
-                            <tr>
-                                <td class="date">Jan 2015 - Maj 2024</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Ängelholms sjukhus</strong></td>
-                                <td>Undersköterska</td>
-                            </tr>
-                            <tr>
-                                <td class="date">Mars 2014 - Jan 2015</td>
-                            </tr>
+                        <tbody id="data-output-work">
+
                         </tbody>
                     </table>
-                    <table class="cv-experience">
-                        <thead>
-                            <tr>
-                                <th>Utbildning</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="education"><strong>Borås Yrkeshögskola, Frontendutvecklare</strong></td>
-                                <td>Jan 2025 - Dec 2026 (Pågående)</td>
-                            </tr>
-                            <tr>
-                                <td class="education"><strong>Tycho Brahe, Omvårdnadsprogrammet</strong></td>
-                                <td>Aug 2010 - Jun 2013</td>
-                            </tr>
-                        </tbody>       
-                    </table>                       
+
+                        <table class="cv-experience">
+                            <thead>
+                                <tr>
+                                    <th>Utbildning</th>
+                                </tr>
+
+                            </thead>
+                            <tbody id="data-output-education">
+
+                            </tbody>
+                        </table>
                 </section>
             </div>
                 

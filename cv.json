@@ -1,0 +1,32 @@
+{
+    "arbetslivserfarenhet": [
+        {
+            "anställningsform": "Hemsjukvården Tuna / Thulehem. Ansvarsområde IT-system",
+            "befattning": "Undersköterska",
+            "period": "Maj 2024 - Jan 2025"
+        },
+        {
+            "anställningsform": "Korttids- / Rehabiliteringsenheten Lund",
+            "befattning": "Undersköterska",
+            "period": "Jan 2015 - Maj 2024"
+        },
+        {
+            "anställningsform": "Ängelholms sjukhus",
+            "befattning": "Undersköterska",
+            "period": "Mars 2014 - Jan 2015"
+        }
+    ],
+    "utbildning":[
+        {
+            "utbildning": "Borås Yrkeshögskola, Frontendutvecklare",
+            "period": "Jan 2025 - Dec 2026 (Pågående)"
+        },
+        {
+            "utbildning": "Tycho Brahe, Omvårdnadsprogrammet",
+            "period": "Aug 2010 - Jun 2013"  
+        }
+
+    ]
+
+
+}

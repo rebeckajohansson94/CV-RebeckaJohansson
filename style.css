@@ -53,6 +53,7 @@ body{
     border-radius: 50%;
     overflow: hidden;
     margin: 1rem;
+    margin-left: 3rem;
 }
 
 .intro {
@@ -74,17 +75,17 @@ h1 {
     display: inline-block;
 }
 
-.cv-link:hover{
+.cv-link:hover, .modal-link:hover{
     color: black;
     transform: scale(1.1);
     text-decoration: underline;
 }
 
 .intro-text{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     line-height: 1.6;
     text-align: start;
-    padding: 1rem;
+    padding: 0 3rem;
 }
 
 .project-heading{
@@ -130,7 +131,7 @@ a:hover{
     font-weight: 600;
 }
 
-.projects:hover{
+.projects:hover {
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.25);
 }
 
@@ -157,22 +158,9 @@ h3{
     margin-top: -0.5rem;
 }
 
-.project-link{
-    color:white;
-    display: block;
-    background-color: black;
-    padding: 1rem;
-    text-align: center;
-    margin-top: 1rem;
-}
-
-.project-link:hover{
-    transform: scale(1.1);
-    color:white;
-}
-
 .project-info{
     padding: 0 3rem 0 3rem;
+    font-size: 1.1rem;
 }
 
 footer {
@@ -189,6 +177,89 @@ footer {
     padding: 1rem;
     font-size: 1.2rem;
 }
+
+/* ----------------- Pop-up modal (from codepen - link in html)-------------------------- */
+
+/* Own code */
+.modal-button{   
+    color:white;
+    display: block;
+    background-color: black;
+    padding: 1rem;
+    text-align: center;
+    margin: 1rem auto auto auto; 
+    font-size: 1.1rem;
+    cursor: pointer;
+    border: 0;
+    width: 14rem;
+}
+
+/* Own code */
+.modal-button:hover {
+    transform: scale(1.1);
+    color:white;
+}
+
+/* From codepen (link in html) */
+.modal-container {
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    opacity: 0; /* to be hidden by default */
+    pointer-events: none; /* so we can click the modal trigger */
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: opacity 0.3s ease;
+}
+/* Own code */
+.modal-picture{
+    height: 20rem;
+    margin: 2rem 0;
+}
+/* Own code */
+.modal-heading{
+    font-size: 3rem;
+    margin-bottom: -0.5rem;
+}
+/* Own code */
+.modal-text{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+/* Own code */
+.modal-link{
+    color:black;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+/* From codepen (link in html) */
+.modal-container.show {
+    pointer-events: auto; /* set back the default value */
+    opacity: 1;
+    z-index: 10; /* Own code - added this part due to the other content displaying atop of the modal*/
+}
+
+/* From codepen (link in html) */
+.modal-content {
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    padding: 30px 50px;
+    width: 600px;
+    max-width: 100%; 
+    text-align: center;
+}
+
+ /* From codepen (link in html) */
+.modal_container {
+    display: none;
+}
+
 
 /*  ------------------------------------ */
 /*  ---------------CV-PAGE-------------- */
@@ -238,7 +309,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 500;
     line-height: 1.6;
 }
@@ -253,6 +324,7 @@ footer {
     text-align: center;
     margin-top: 2rem;
     margin-bottom: -2rem;
+    font-size: 1.7rem;
 }
 
 th{
@@ -261,9 +333,16 @@ th{
 
 .cv-experience{
     padding: 2rem;
-    border-spacing: 1rem;
+    border-spacing: 0.7rem;
     text-align: left;
+    font-size: 1.1rem;
 }
+
+hr{
+    margin-top: 2.5rem;
+    border: 1.5px solid black;
+}
+
 
 /*  ------------------------------------ */
 /*  ------------CONTACT-PAGE------------ */
@@ -300,7 +379,7 @@ th{
 .contact-form label,
 .contactinfo p,
 .btn{
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 500;
 }
 
@@ -329,7 +408,7 @@ th{
 }
 
 #message{
-    width: 30%;
+    width: 20%;
     height: 9rem;
     border-radius: 8px;
     resize: none;
@@ -354,7 +433,38 @@ th{
 /*  ------------RESPONSIVE-------------- */
 /*  ------------------------------------ */
 
+.menu-toggle-btn{
+    display:none;
+}
 @media (max-width: 800px) {
+
+    .navigation{
+        display: none;
+        flex-direction: column;
+        padding: 2rem;
+        position: fixed;
+        right: 0;
+        width: 45%;
+        background-color: #333333;
+    }
+
+    .navigation li{
+        padding: 1rem 0;
+    }
+
+    .menu-toggle-btn{
+        display: flex;
+        font-size: 1.7rem;
+        justify-content: end;
+        padding-right: 1rem;
+        cursor: pointer;
+        }
+
+    .navigation-open{
+        display: flex;
+    }
+
+
     .container{
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, auto);
@@ -387,8 +497,28 @@ th{
         margin-bottom: -0.5rem;
     }
 
+    .modal-content{
+        width: 90%;
+    }
+
+    .modal-heading{
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: -2rem;
+        display: contents;
+    }
+
+    .modal-picture{
+        height: 13rem;
+    }
+
+    .modal-text{
+        font-size: 1.3rem;
+    }
+
     .intro-text{
         text-align: center;
+        padding: 2rem;
     }
     .projects{
         width: auto;
@@ -415,10 +545,7 @@ th{
         height: 8rem;
     }
 
-    .project-link{
-        padding: 0.4rem 0;
-    }
-
+    
     .container-aboutme{
         background: linear-gradient(to top,#e9d2c3, #ece8e8);
         min-height: 100vh;
@@ -457,9 +584,18 @@ th{
         padding-bottom: 1rem;
     }
 
+    .modal-button{
+        width: 9rem;
+        margin-top: 1rem;
+    }
+
     .experience-heading{
         margin: 2rem;
         font-size: 2rem;
+    }
+
+    hr{
+        margin: -2rem 0 2rem 0;
     }
 
     .date{
@@ -493,7 +629,7 @@ th{
     }
 }
 
-@media (min-width: 801px) and (max-width: 1200px) {
+@media (min-width: 801px) and (max-width: 1250px) {
     .container{
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, auto);
@@ -526,8 +662,14 @@ th{
         margin-bottom: -0.5rem;
     }
 
+    .modal-heading{
+        display: contents;
+    }
+
+
     .intro-text{
         text-align: center;
+        padding: 2rem;
     }
     .projects{
         width: auto;
@@ -548,10 +690,10 @@ th{
         grid-area: project4;
     }
     .project-picture {
-        height: 15rem;
+        height: 12rem;
     }
     .project-picture-placeholder {
-        height: 15rem;
+        height: 12rem;
     }
 
     .contact-heading{
@@ -569,10 +711,25 @@ th{
     }
     
     #message{
-        width: 40%;
+        width: 30%;
         height: 9rem;
         border-radius: 8px;
         resize: none;
         padding: 0.5rem 1rem;
+    }
+}
+
+@media (min-width: 1251px) and (max-width: 1400px){
+
+    .project-picture-placeholder{
+        width: 15rem;
+        height: 15rem;
+    }
+
+    .project-picture{
+        width: 15rem;
+        height: 15rem;
+
+
     }
 }
