@@ -4,4 +4,4 @@
 
 **Description:** My personal CV/website.
 
-**Link to project:** (https://rebeckajohansson94.github.io/CV-RebeckaJohansson/)
+**Link to project:** https://rebeckajohansson94.github.io/CV-RebeckaJohansson/
