@@ -178,7 +178,7 @@ footer {
     font-size: 1.2rem;
 }
 
-/* ----------------- Pop-up modal (from codepen - link in html)-------------------------- */
+/* ---------------------Modal Pop-up (from codepen - link in index.html)------------------------- */
 
 /* Own code */
 .modal-button{   
@@ -200,15 +200,15 @@ footer {
     color:white;
 }
 
-/* From codepen (link in html) */
+/* From codepen */
 .modal-container {
     background-color: rgba(0, 0, 0, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
     position: fixed;
-    opacity: 0; /* to be hidden by default */
-    pointer-events: none; /* so we can click the modal trigger */
+    opacity: 0; 
+    pointer-events: none;
     top: 0;
     left: 0;
     height: 100vh;
@@ -237,14 +237,14 @@ footer {
     margin-right: 0.5rem;
 }
 
-/* From codepen (link in html) */
+/* From codepen */
 .modal-container.show {
-    pointer-events: auto; /* set back the default value */
+    pointer-events: auto; 
     opacity: 1;
     z-index: 10; /* Own code - added this part due to the other content displaying atop of the modal*/
 }
 
-/* From codepen (link in html) */
+/* From codepen */
 .modal-content {
     background-color: #fff;
     border-radius: 50px;
@@ -255,7 +255,7 @@ footer {
     text-align: center;
 }
 
- /* From codepen (link in html) */
+ /* From codepen */
 .modal_container {
     display: none;
 }
@@ -729,7 +729,5 @@ hr{
     .project-picture{
         width: 15rem;
         height: 15rem;
-
-
     }
 }

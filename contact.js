@@ -1,4 +1,4 @@
-// ------ My own js -------- 
+// ------ My own code -------- 
 
 const button = document.querySelector(".btn");
 const contactForm = document.querySelector(".contact-form");
